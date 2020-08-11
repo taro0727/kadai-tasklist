@@ -10,9 +10,10 @@
         <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
-                {{-- タスク作成ページへのリンク --}}
-                <li class="nav-item">{!! link_to_route('tasks.create', '新規タスクの作成', [], ['class' => 'nav-link']) !!}</li>
-            </ul>
+                {{-- ユーザ登録ページへのリンク --}}
+                <li class="nav-item"><a href="#" class="nav-link">Signup</a></li>
+                {{-- ログインページへのリンク --}}
+                <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
         </div>
     </nav>
 </header>
