@@ -142,11 +142,10 @@ class TasksController extends Controller
         $task = Task::findOrFail($id);
         //タスク更新
         if(\Auth::id() === $task->user_id) {
-        $request->user()->tasks()->create([
-        'user_id' => \Auth::id(),
-        'status' => $request->status,
-        'content' => $request->content,
-        ]);
+        $task->user_id = \Auth::id();
+        $task->status = $request->status;
+        $task->content = $request->content;
+        $task->save();
         }
         //トップページへリダイレクト
         return redirect('/');
