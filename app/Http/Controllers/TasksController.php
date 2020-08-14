@@ -22,7 +22,6 @@ class TasksController extends Controller
 
         // ユーザの投稿一覧を作成日時の降順で取得
         $tasks = $user->tasks()->orderBy('created_at', 'desc')->paginate(10);
-        
         //タスク一覧ビューでそれを表示
         return view('tasks.index',[
             'tasks'=> $tasks,
